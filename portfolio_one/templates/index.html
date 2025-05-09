@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylr.css') }}">
+    <link rel="stylesheet" href="../static/css/stylr.css">
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Lethean Seourn</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Thean</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link" data-translate="home">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link" data-translate="about">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link" data-translate="projects">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link" data-translate="contact">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <a href="../../portfolio_two/index.html"><button class="btn" data-translate="more_detail">More Detail<i class="uil-file-alt"></i></button></a>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      <!-- Language Switcher -->
+        <div class="language-switch">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="km">ភាសាខ្មែរ</option>
+        </select>
+        </div>
+ 
+        <script>
+        // Translation dictionary
+        const translations = {
+            en: {
+                home: "Home",
+                about: "About",
+                projects: "Projects",
+                contact: "Contact",
+                more_detail: "More Detail",
+                featured_text: "Lethean Seourn",
+                featured_info: "Experienced Python developer with a passion for creating visually stunning and smart systems.",
+                hire_me: "Hire Me",
+                download_cv: "Download CV",
+                scroll_down: "Scroll Down",
+                about_me: "About Me",
+                my_intro: "My introduction",
+                about_text: "Chandy Neat - Aspiring Web Developer\n\nI am a passionate Web Developer currently in my second year at Passerelles Numériques Cambodia (PNC). Through my studies and projects, I have honed my skills in web design, development, and problem-solving.\n\nMy journey includes completing two impactful projects:\n\nWeb Design Project: Focused on creating intuitive and visually appealing user interfaces.\nAlgorithm Project: Developed efficient solutions for complex challenges, showcasing my logical and analytical thinking.\n\nBeyond technical skills, I am driven by curiosity and a love for learning. I enjoy researching new technologies and acquiring skills that empower me to grow personally and professionally.",
+                frontend: "Frontend",
+                backend: "Backend",
+                database: "Database",
+                projects_title: "Projects",
+                completed: "Completed",
+                finished_projects: "3+ Finished Projects",
+                school_projects: "School Projects",
+                experience: "Experience",
+                years_experience: "1+ Years in the field",
+                get_in_touch: "Get in touch",
+                contact_message: "Do you have a project in your mind, contact me here",
+                find_me: "Find Me",
+                name_placeholder: "Name",
+                email_placeholder: "Email",
+                message_placeholder: "Message",
+                send: "Send",
+                copyright: "Copyright",
+                all_rights: "All rights reserved"
+            },
+            km: {
+                home: "ទំព័រដើម",
+                about: "អំពីខ្ញុំ",
+                projects: "គម្រោង",
+                contact: "ទំនាក់ទំនង",
+                more_detail: "ព័ត៌មានលម្អិត",
+                featured_text: "លិធាន​ សឿន",
+                typed_text: ["អ្នកអភិវឌ្ឍន៍គេហទំព័រ", "អ្នករចនា", "អ្នកសរសេរកម្មវិធី"],
+                featured_info: "អ្នកអភិវឌ្ឍន៍ Python មានបទពិសោធន៍ ដែលមានចំណាប់អារម្មណ៍លើការបង្កើតប្រព័ន្ធដ៏ស្រស់ស្អាត និងឆ្លាតវៃ។",
+                hire_me: "ជួលខ្ញុំ",
+                download_cv: "ទាញយក CV",
+                scroll_down: "រំកិលចុះក្រោម",
+                about_me: "អំពីខ្ញុំ",
+                my_intro: "ការណែនាំអំពីខ្ញុំ",
+                about_text: "ចាន់ឌី នៀត - អ្នកអភិវឌ្ឍន៍គេហទំព័រ\n\nខ្ញុំគឺជាអ្នកអភិវឌ្ឍន៍គេហទំព័រដែលមានចំណាប់អារម្មណ៍ កំពុងសិក្សាឆ្នាំទី២នៅ Passerelles Numériques Cambodia (PNC)។ តាមរយៈការសិក្សា និងគម្រោងរបស់ខ្ញុំ ខ្ញុំបានពង្រឹងជំនាញរបស់ខ្ញុំក្នុងការរចនាគេហទំព័រ ការអភិវឌ្ឍន៍ និងការដោះស្រាយបញ្ហា។\n\nដំណើររបស់ខ្ញុំរួមមានការបញ្ចប់គម្រោងដ៏អស្ចារ្យពីរ៖\n\nគម្រោងរចនាគេហទំព័រ៖ ផ្តោតលើការបង្កើតចំណុចប្រទាក់អ្នកប្រើប្រាស់ដែលងាយស្រួល និងស្រស់ស្អាត។\nគម្រោងអាល់ហ្គោរីតែម៖ បានអភិវឌ្ឍដំណោះស្រាយដ៏មានប្រសិទ្ធភាពសម្រាប់បញ្ហាស្មុគស្មាញ បង្ហាញពីការគិតឡូជីខល និងការវិភាគរបស់ខ្ញុំ។\n\nក្រៅពីជំនាញបច្ចេកទេស ខ្ញុំត្រូវបានដឹកនាំដោយចំណាប់អារម្មណ៍ និងការស្រឡាញ់រៀនសូត្រ។ ខ្ញុំចូលចិត្តស្រាវជ្រាវបច្ចេកវិទ្យាថ្មីៗ និងការទទួលបានជំនាញដែលជួយឱ្យខ្ញុំអាចរីកចម្រើនផ្ទាល់ខ្លួន និងវិជ្ជាជីវៈ។",
+                frontend: "ផ្នែកខាងមុខ",
+                backend: "ផ្នែកខាងក្រោយ",
+                database: "ទិន្នន័យ",
+                projects_title: "គម្រោង",
+                completed: "បានបញ្ចប់",
+                finished_projects: "គម្រោងដែលបានបញ្ចប់ ៣+",
+                school_projects: "គម្រោងសាលា",
+                experience: "បទពិសោធន៍",
+                years_experience: "១+ ឆ្នាំក្នុងវិស័យនេះ",
+                get_in_touch: "ទាក់ទង",
+                contact_message: "តើអ្នកមានគម្រោងនៅក្នុងចិត្តរបស់អ្នកទេ សូមទាក់ទងមកខ្ញុំនៅទីនេះ",
+                find_me: "រកឃើញខ្ញុំ",
+                name_placeholder: "ឈ្មោះ",
+                email_placeholder: "អ៊ីមែល",
+                message_placeholder: "សារ",
+                send: "ផ្ញើ",
+                copyright: "រក្សាសិទ្ធិ",
+                all_rights: "រក្សាសិទ្ធិគ្រប់យ៉ាង"
+            }
+        };
+
+
+        function changeLanguage() {
+            const select = document.getElementById('languageSelect');
+            const lang = select.value;
+            
+            // Update all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update typed.js text if it exists
+            if (window.typed) {
+                typed.destroy();
+                initTyped(lang);
+            }
+            
+            // Update other text elements that don't have data-translate
+            document.querySelector('.featured-text-card span').textContent = translations[lang].featured_text;
+            document.querySelector('.featured-text-info p').textContent = translations[lang].featured_info;
+            document.querySelector('.top-header h1').textContent = translations[lang].about_me;
+            document.querySelector('.about-info h3').textContent = translations[lang].my_intro;
+            document.querySelector('.about-info p').textContent = translations[lang].about_text;
+            document.querySelector('.scroll-btn p').textContent = translations[lang].scroll_down;
+            document.querySelector('.blue-btn').textContent = translations[lang].hire_me;
+            document.querySelectorAll('.btn:not(.blue-btn)')[0].innerHTML = translations[lang].download_cv + ' <i class="uil uil-file-alt"></i>';
+            document.querySelectorAll('.btn:not(.blue-btn)')[1].innerHTML = translations[lang].download_cv + ' <i class="uil uil-file-alt"></i>';
+            document.querySelector('#projects .top-header h1').textContent = translations[lang].projects_title;
+            document.querySelectorAll('.project-box h3')[0].textContent = translations[lang].completed;
+            document.querySelectorAll('.project-box label')[0].textContent = translations[lang].finished_projects;
+            document.querySelectorAll('.project-box h3')[1].textContent = translations[lang].school_projects;
+            document.querySelectorAll('.project-box h4')[2].textContent = translations[lang].experience;
+            document.querySelectorAll('.project-box label')[2].textContent = translations[lang].years_experience;
+            document.querySelector('#contact .top-header h1').textContent = translations[lang].get_in_touch;
+            document.querySelector('#contact .top-header span').textContent = translations[lang].contact_message;
+            document.querySelector('.contact-info h2').textContent = translations[lang].find_me;
+            document.querySelector('.input-field[placeholder="Name"]').placeholder = translations[lang].name_placeholder;
+            document.querySelector('.input-field[placeholder="Email"]').placeholder = translations[lang].email_placeholder;
+            document.querySelector('textarea[placeholder="Message"]').placeholder = translations[lang].message_placeholder;
+            document.querySelector('.form-button .btn').innerHTML = translations[lang].send + ' <i class="uil uil-message"></i>';
+            document.querySelector('.bottom-footer p').innerHTML = translations[lang].copyright + ' &copy; <a href="#home" style="text-decoration: none;">Lethean Seourn</a> - ' + translations[lang].all_rights;
+        }
+
+        // Initialize typed.js with language
+        function initTyped(lang = 'en') {
+            window.typed = new Typed('.typedText', {
+                strings: translations[lang].typed_text,
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 2000
+            });
+        }
+        </script>
+      </nav>
+
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Lethean Seourn</span>
+            </div>
+            <div class="featured-name">
+                <p data-translate="i_am">I'm <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>Experienced Python developer with a passion for creating visually stunning
+                   and smart systems.
+                </p>
+            </div>
+            <div class="featured-text-btn">
+                <a style="text-decoration: none;"  class="btn blue-btn" href="https://t.me/Lethean_Seourn">Hire Me</a>
+                <a href="https://drive.google.com/file/d/1-4DqInLOuo__dDUmVtIHNnyTak1fXnBN/view?usp=sharing"><button class="btn">Resume<i class="uil uil-file-alt"></i></button></a>
+            </div>
+            <div class="social_icons">
+                <a href="https://www.facebook.com/share/1BSo9BnhK9/"><div class="icon">
+                    <i class="uil uil-facebook-f"></i>
+                  </div></a>
+                <a href="https://www.linkedin.com/in/le-thean-seourn-545baa363/"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
+                <a href="tel:014532675"><div class="icon"><i class="uil uil-phone"></i></div></a>
+                <a href="https://github.com/Lethean_Seourn"><div class="icon"><i class="uil uil-github-alt"></i></div></a>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="../static/image/profile.jpg" alt="avatar">
+            </div>
+          </div>
+          <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+          </div>
+       </section>
+       <!-- -------------- ABOUT BOX ---------------- -->
+       <section class="section" id="about">
+          <div class="top-header">
+            <h1>About Me</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+                <div class="about-info">
+                    <h3>My introduction</h3>
+                    <p>Chandy Neat - Aspiring Web Developer
+
+
+                        I am a passionate Web Developer currently in my second year at Passerelles Numériques Cambodia (PNC). Through my studies and projects, I have honed my skills in web design, development, and problem-solving.
+                        
+                        My journey includes completing two impactful projects:
+                        
+                        Web Design Project: Focused on creating intuitive and visually appealing user interfaces.
+                        Algorithm Project: Developed efficient solutions for complex challenges, showcasing my logical and analytical thinking.
+                        Beyond technical skills, I am driven by curiosity and a love for learning. I enjoy researching new technologies and acquiring skills that empower me to grow personally and professionally.
+                    </p>
+                    <div class="about-btn">
+                        <a href="download"><button class="btn">Download CV <i class="uil uil-file-alt"></i></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3 data-translate="frontend">Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                        <span>Vue</span>
+                        <span>React</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3 data-translate="backend">Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3 data-translate="database">Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+
+       <section class="section" id="projects">
+          <div class="top-header">
+              <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box">
+                <i class="uil uil-briefcase-alt"></i>
+                <h3>Completed</h3>
+                <label data-translate="finished_projects">3+ Finished Projects</label>
+            </div>
+           <div class="project-box">
+    <i class="uil uil-users-alt"></i>
+    <h3 data-translate="school_projects">School Projects</h3>
+    <label>
+        <a href="https://lethean-student-info.site/">Web Design</a>
+    </label>
+    <label>
+        <a href="https://github.com/Lethean2005/TelegramChatBot_G14">Algorithm</a>
+    </label>
+    <label>
+        <a href="https://g20-task-management-app.netlify.app/">JavaScript Project</a>
+    </label>
+</div>
+            <div class="project-box">
+                <i class="uil uil-award"></i>
+                <h3 data-translate="experience">Experience</h3>
+                <label data-translate="years_experience">1+ Years in the field</label>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+
+
+       <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Do you have a project in your mind, contact me here</span>
+          </div>
+          <div class="row">
+             <div class="col">
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email:lethean.seourn@studnt.passerellesnumeriques.org</p>
+                    <p><i class="uil uil-phone"></i> Tel: 014 532 675</p>
+                    <p><i class="uil uil-address"></i> Address : Phnom Penh</p>
+                </div>
+             </div>
+             <div class="col">
+                <form action="https://t.me/Lethean_Seourn" method="POST">
+                    <div class="form-control">
+                        <div class="form-inputs">
+                            <input type="text" name="name" class="input-field" placeholder="Name" required>
+                            <input type="text" name="email" class="input-field" placeholder="Email" required>
+                        </div>
+                        <div class="text-area">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                        </div>
+                    </div>
+                </form>
+             </div>
+          </div>
+       </section>
+    </main>
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Lethean Seourn .</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home" data-translate="home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about" data-translate="about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects" data-translate="projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact" data-translate="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social_icons">
+                <a href="https://www.facebook.com/share/1BSo9BnhK9/"><div class="icon">
+                    <i class="uil uil-facebook-f"></i>
+                  </div></a>
+                <a href="https://www.linkedin.com/in/le-thean-seourn-545baa363/"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
+                <a href="tel:014532675"><div class="icon"><i class="uil uil-phone"></i></div></a>
+                <a href="https://github.com/Lethean_Seourn"><div class="icon"><i class="uil uil-github-alt"></i></div></a>
+            </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Lethean Seourn</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="../static/js/index.js"></script>
+
+    <script>
+        // Initialize typed.js when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initTyped();
+        });
+    </script>
+</body>
+</html>
