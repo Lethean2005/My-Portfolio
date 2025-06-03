@@ -1,417 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lethean Seourn - Web Developer from Cambodia</title>
 
-    <!-- --------- UNICONS ---------- -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="assets/images/Group 194 (1).png"
+      type="image/svg+xml">
 
-    <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="./css/stylr.css">
-    <!-- --------- FAVICON ---------- -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 
-    <title>Lethean Seourn</title>
-</head>
-<body>
-   <div class="container">
-    <!-- --------------- HEADER --------------- -->
-      <nav id="header">
-        <div class="nav-logo">
-            <p class="nav-name">Thean</p>
-            <span>.</span>
-        </div>
-        <div class="nav-menu" id="myNavMenu">
-            <ul class="nav_menu_list">
-                <li class="nav_list">
-                    <a href="#home" class="nav-link active-link" data-translate="home">Home</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#about" class="nav-link" data-translate="about">About</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#projects" class="nav-link" data-translate="projects">Projects</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#contact" class="nav-link" data-translate="contact">Contact</a>
-                    <div class="circle"></div>
-                </li>
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body id="top">
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+
+        <a href="#">
+          <h1 class="logo">Lethean .</h1>
+        </a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle Menu"
+          data-nav-toggle-btn>
+          <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+          <ion-icon name="close-outline" class="close-icon"></ion-icon>
+        </button>
+
+        <nav class="navbar container">
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About</a>
+            </li>
+
+            <li>
+              <a href="#portfolio" class="navbar-link"
+                data-nav-link>Portfolio</a>
+            </li>
+
+            <li>
+              <a href="#skills" class="navbar-link" data-nav-link>Skills</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="#" class="btn btn-primary">Download CV</a>
+            </li>
+
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+      <article>
+
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="hero" id="home">
+          <div class="container">
+
+            <div class="hero-banner">
+
+              <img src="./assets/images/profile.jpg" width="800" height="864"
+                loading="lazy" alt="Ethan's Photo"
+                class="img-cover">
+
+              <div class="elem elem-1">
+                <p class="elem-title">2</p>
+
+                <p class="elem-text">Years of Success</p>
+              </div>
+
+              <div class="elem elem-2">
+                <p class="elem-title">5+</p>
+
+                <p class="elem-text">Projects Completed</p>
+              </div>
+
+              <div class="elem elem-3">
+                <ion-icon name="trophy"></ion-icon>
+              </div>
+
+              <img
+                src="./assets/images/ChatGPT Image May 25, 2025, 10_29_25 PM.png"
+                width="269" height="172" alt="I'm developer from New York"
+                class="rotate-img">
+
+            </div>
+
+            <div class="hero-content">
+
+              <h2 class="hero-title">
+                <span>Hello I'm</span>
+                <strong>Lethean</strong> Web Developer from PNC
+              </h2>
+
+              <p class="hero-text">
+                I'm Lethean Seourn, a web developer from PNC with over 2 years
+                of experience. I specialize in building functional and visually
+                appealing websites.
+              </p>
+
+              <div class="btn-group">
+                <a href="http://t.me/Lethean_Seourn"
+                  class="btn btn-primary blue">Hire me</a>
+
+                <a href="#about" class="btn">About Me</a>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+        <section class="section about" id="about">
+          <div class="container">
+
+            <figure class="about-banner">
+              <img src="./assets/images/lethean.png" alt="Lethean"
+                loading="lazy" class="img-cover">
+
+              <!-- <img src="./assets/images/absolute-image.jpg" alt="Lethean"
+                loading="lazy" class="abs-img"> -->
+
+              <div class="abs-icon abs-icon-1">
+                <ion-icon name="logo-css3"></ion-icon>
+              </div>
+
+              <div class="abs-icon abs-icon-2">
+                <ion-icon name="logo-javascript"></ion-icon>
+              </div>
+
+              <div class="abs-icon abs-icon-3">
+                <ion-icon name="logo-angular"></ion-icon>
+              </div>
+            </figure>
+
+            <div class="about-content">
+
+              <p class="section-subtitle">I'm a Developer</p>
+
+              <h2 class="h2 section-title">I am passionate about developing
+                websites.</h2>
+
+              <p class="section-text">
+                This is a showcase of my best work—crafted with attention to
+                detail, creativity, and a focus on delivering meaningful user
+                experiences.
+              </p>
+
+              <p class="section-text">
+                I’m committed to delivering high-quality work with integrity and
+                professionalism, always aiming for excellence in everything I
+                do.
+              </p>
+
+              <a href="#portfolio" class="btn btn-primary blue">View
+                Portfolio</a>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 
+        - #PORTFOLIO
+      -->
+
+        <section class="section portfolio" id="portfolio">
+          <div class="container">
+
+            <p class="section-subtitle">Portfolio</p>
+
+            <h2 class="h2 section-title">My Amazing Works</h2>
+
+            <p class="section-text">
+              This is a collection of my featured work, created with passion and
+              attention to detail.
+            </p>
+
+            <ul class="portfolio-list">
+
+              <li>
+                <div class="portfolio-card"
+                  style="background-image: url('./assets/images/portfolio-1.jpg')">
+                  <div class="card-content">
+                    <p class="card-subtitle">Product Owner</p>
+                    <h3 class="h3 card-title">E-commerce System Management</h3>
+                    <a href="https://github.com/OEUBROCHOM/VC1-G9-Daily-Needs"
+                      class="btn-link">
+                      <span>View Project</span>
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="portfolio-card"
+                  style="background-image: url('./assets/images/portfolio-2.jpg')">
+                  <div class="card-content">
+                    <p class="card-subtitle">Team Leader</p>
+                    <h3 class="h3 card-title">Telegram Chatbot</h3>
+                    <a href="https://github.com/Lethean2005/TelegramChatBot_G14"
+                      class="btn-link">
+                      <span>View Project</span>
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="portfolio-card"
+                  style="background-image: url('./assets/images/portfolio-3.jpg')">
+                  <div class="card-content">
+                    <p class="card-subtitle">Team Leader</p>
+                    <h3 class="h3 card-title">Music Band Project</h3>
+                    <a href="https://lethean-student-info.site/"
+                      class="btn-link">
+                      <span>View Project</span>
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="portfolio-card"
+                  style="background-image: url('./assets/images/portfolio-4.jpg')">
+                  <div class="card-content">
+                    <p class="card-subtitle">Git Manager</p>
+                    <h3 class="h3 card-title">Task Management Application</h3>
+                    <a href="https://g20-task-management-app.netlify.app/"
+                      class="btn-link">
+                      <span>View Project</span>
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
             </ul>
-        </div>
-        <div class="nav-button">
-            <a href="../../portfolio_two/index.html"><button class="btn" data-translate="more_detail">More Detail<i class="uil-file-alt"></i></button></a>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
-      <!-- Language Switcher -->
-        <div class="language-switch">
-        <select id="languageSelect" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="km">ភាសាខ្មែរ</option>
-        </select>
-        </div>
- 
-        <script>
-        // Translation dictionary
-        const translations = {
-            en: {
-                home: "Home",
-                about: "About",
-                projects: "Projects",
-                contact: "Contact",
-                more_detail: "More Detail",
-                featured_text: "Lethean Seourn",
-                featured_info: "Experienced Python developer with a passion for creating visually stunning and smart systems.",
-                hire_me: "Hire Me",
-                download_cv: "Download CV",
-                scroll_down: "Scroll Down",
-                about_me: "About Me",
-                my_intro: "My introduction",
-                about_text: "Chandy Neat - Aspiring Web Developer\n\nI am a passionate Web Developer currently in my second year at Passerelles Numériques Cambodia (PNC). Through my studies and projects, I have honed my skills in web design, development, and problem-solving.\n\nMy journey includes completing two impactful projects:\n\nWeb Design Project: Focused on creating intuitive and visually appealing user interfaces.\nAlgorithm Project: Developed efficient solutions for complex challenges, showcasing my logical and analytical thinking.\n\nBeyond technical skills, I am driven by curiosity and a love for learning. I enjoy researching new technologies and acquiring skills that empower me to grow personally and professionally.",
-                frontend: "Frontend",
-                backend: "Backend",
-                database: "Database",
-                projects_title: "Projects",
-                completed: "Completed",
-                finished_projects: "3+ Finished Projects",
-                school_projects: "School Projects",
-                experience: "Experience",
-                years_experience: "1+ Years in the field",
-                get_in_touch: "Get in touch",
-                contact_message: "Do you have a project in your mind, contact me here",
-                find_me: "Find Me",
-                name_placeholder: "Name",
-                email_placeholder: "Email",
-                message_placeholder: "Message",
-                send: "Send",
-                copyright: "Copyright",
-                all_rights: "All rights reserved"
-            },
-            km: {
-                home: "ទំព័រដើម",
-                about: "អំពីខ្ញុំ",
-                projects: "គម្រោង",
-                contact: "ទំនាក់ទំនង",
-                more_detail: "ព័ត៌មានលម្អិត",
-                featured_text: "លិធាន​ សឿន",
-                typed_text: ["អ្នកអភិវឌ្ឍន៍គេហទំព័រ", "អ្នករចនា", "អ្នកសរសេរកម្មវិធី"],
-                featured_info: "អ្នកអភិវឌ្ឍន៍ Python មានបទពិសោធន៍ ដែលមានចំណាប់អារម្មណ៍លើការបង្កើតប្រព័ន្ធដ៏ស្រស់ស្អាត និងឆ្លាតវៃ។",
-                hire_me: "ជួលខ្ញុំ",
-                download_cv: "ទាញយក CV",
-                scroll_down: "រំកិលចុះក្រោម",
-                about_me: "អំពីខ្ញុំ",
-                my_intro: "ការណែនាំអំពីខ្ញុំ",
-                about_text: "ចាន់ឌី នៀត - អ្នកអភិវឌ្ឍន៍គេហទំព័រ\n\nខ្ញុំគឺជាអ្នកអភិវឌ្ឍន៍គេហទំព័រដែលមានចំណាប់អារម្មណ៍ កំពុងសិក្សាឆ្នាំទី២នៅ Passerelles Numériques Cambodia (PNC)។ តាមរយៈការសិក្សា និងគម្រោងរបស់ខ្ញុំ ខ្ញុំបានពង្រឹងជំនាញរបស់ខ្ញុំក្នុងការរចនាគេហទំព័រ ការអភិវឌ្ឍន៍ និងការដោះស្រាយបញ្ហា។\n\nដំណើររបស់ខ្ញុំរួមមានការបញ្ចប់គម្រោងដ៏អស្ចារ្យពីរ៖\n\nគម្រោងរចនាគេហទំព័រ៖ ផ្តោតលើការបង្កើតចំណុចប្រទាក់អ្នកប្រើប្រាស់ដែលងាយស្រួល និងស្រស់ស្អាត។\nគម្រោងអាល់ហ្គោរីតែម៖ បានអភិវឌ្ឍដំណោះស្រាយដ៏មានប្រសិទ្ធភាពសម្រាប់បញ្ហាស្មុគស្មាញ បង្ហាញពីការគិតឡូជីខល និងការវិភាគរបស់ខ្ញុំ។\n\nក្រៅពីជំនាញបច្ចេកទេស ខ្ញុំត្រូវបានដឹកនាំដោយចំណាប់អារម្មណ៍ និងការស្រឡាញ់រៀនសូត្រ។ ខ្ញុំចូលចិត្តស្រាវជ្រាវបច្ចេកវិទ្យាថ្មីៗ និងការទទួលបានជំនាញដែលជួយឱ្យខ្ញុំអាចរីកចម្រើនផ្ទាល់ខ្លួន និងវិជ្ជាជីវៈ។",
-                frontend: "ផ្នែកខាងមុខ",
-                backend: "ផ្នែកខាងក្រោយ",
-                database: "ទិន្នន័យ",
-                projects_title: "គម្រោង",
-                completed: "បានបញ្ចប់",
-                finished_projects: "គម្រោងដែលបានបញ្ចប់ ៣+",
-                school_projects: "គម្រោងសាលា",
-                experience: "បទពិសោធន៍",
-                years_experience: "១+ ឆ្នាំក្នុងវិស័យនេះ",
-                get_in_touch: "ទាក់ទង",
-                contact_message: "តើអ្នកមានគម្រោងនៅក្នុងចិត្តរបស់អ្នកទេ សូមទាក់ទងមកខ្ញុំនៅទីនេះ",
-                find_me: "រកឃើញខ្ញុំ",
-                name_placeholder: "ឈ្មោះ",
-                email_placeholder: "អ៊ីមែល",
-                message_placeholder: "សារ",
-                send: "ផ្ញើ",
-                copyright: "រក្សាសិទ្ធិ",
-                all_rights: "រក្សាសិទ្ធិគ្រប់យ៉ាង"
-            }
-        };
-
-
-        function changeLanguage() {
-            const select = document.getElementById('languageSelect');
-            const lang = select.value;
-            
-            // Update all elements with data-translate attribute
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            
-            // Update typed.js text if it exists
-            if (window.typed) {
-                typed.destroy();
-                initTyped(lang);
-            }
-            
-            // Update other text elements that don't have data-translate
-            document.querySelector('.featured-text-card span').textContent = translations[lang].featured_text;
-            document.querySelector('.featured-text-info p').textContent = translations[lang].featured_info;
-            document.querySelector('.top-header h1').textContent = translations[lang].about_me;
-            document.querySelector('.about-info h3').textContent = translations[lang].my_intro;
-            document.querySelector('.about-info p').textContent = translations[lang].about_text;
-            document.querySelector('.scroll-btn p').textContent = translations[lang].scroll_down;
-            document.querySelector('.blue-btn').textContent = translations[lang].hire_me;
-            document.querySelectorAll('.btn:not(.blue-btn)')[0].innerHTML = translations[lang].download_cv + ' <i class="uil uil-file-alt"></i>';
-            document.querySelectorAll('.btn:not(.blue-btn)')[1].innerHTML = translations[lang].download_cv + ' <i class="uil uil-file-alt"></i>';
-            document.querySelector('#projects .top-header h1').textContent = translations[lang].projects_title;
-            document.querySelectorAll('.project-box h3')[0].textContent = translations[lang].completed;
-            document.querySelectorAll('.project-box label')[0].textContent = translations[lang].finished_projects;
-            document.querySelectorAll('.project-box h3')[1].textContent = translations[lang].school_projects;
-            document.querySelectorAll('.project-box h4')[2].textContent = translations[lang].experience;
-            document.querySelectorAll('.project-box label')[2].textContent = translations[lang].years_experience;
-            document.querySelector('#contact .top-header h1').textContent = translations[lang].get_in_touch;
-            document.querySelector('#contact .top-header span').textContent = translations[lang].contact_message;
-            document.querySelector('.contact-info h2').textContent = translations[lang].find_me;
-            document.querySelector('.input-field[placeholder="Name"]').placeholder = translations[lang].name_placeholder;
-            document.querySelector('.input-field[placeholder="Email"]').placeholder = translations[lang].email_placeholder;
-            document.querySelector('textarea[placeholder="Message"]').placeholder = translations[lang].message_placeholder;
-            document.querySelector('.form-button .btn').innerHTML = translations[lang].send + ' <i class="uil uil-message"></i>';
-            document.querySelector('.bottom-footer p').innerHTML = translations[lang].copyright + ' &copy; <a href="#home" style="text-decoration: none;">Lethean Seourn</a> - ' + translations[lang].all_rights;
-        }
-
-        // Initialize typed.js with language
-        function initTyped(lang = 'en') {
-            window.typed = new Typed('.typedText', {
-                strings: translations[lang].typed_text,
-                loop: true,
-                typeSpeed: 100,
-                backSpeed: 50,
-                backDelay: 2000
-            });
-        }
-        </script>
-      </nav>
-
-
-    <!-- -------------- MAIN ---------------- -->
-    <main class="wrapper">
-       <!-- -------------- FEATURED BOX ---------------- -->
-       <section class="featured-box" id="home">
-          <div class="featured-text">
-            <div class="featured-text-card">
-                <span>Lethean Seourn</span>
-            </div>
-            <div class="featured-name">
-                <p data-translate="i_am">I'm <span class="typedText"></span></p>
-            </div>
-            <div class="featured-text-info">
-                <p>Experienced Python developer with a passion for creating visually stunning
-                   and smart systems.
-                </p>
-            </div>
-            <div class="featured-text-btn">
-                <a style="text-decoration: none;"  class="btn blue-btn" href="https://t.me/Lethean_Seourn">Hire Me</a>
-                <a href="https://drive.google.com/file/d/1-4DqInLOuo__dDUmVtIHNnyTak1fXnBN/view?usp=sharing"><button class="btn">Resume<i class="uil uil-file-alt"></i></button></a>
-            </div>
-            <div class="social_icons">
-                <a href="https://www.facebook.com/share/1BSo9BnhK9/"><div class="icon">
-                    <i class="uil uil-facebook-f"></i>
-                  </div></a>
-                <a href="https://www.linkedin.com/in/le-thean-seourn-545baa363/"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
-                <a href="tel:014532675"><div class="icon"><i class="uil uil-phone"></i></div></a>
-                <a href="https://github.com/Lethean_Seourn"><div class="icon"><i class="uil uil-github-alt"></i></div></a>
-            </div>
           </div>
-          <div class="featured-image">
-            <div class="image">
-                <img src="../static/image/profile.jpg" alt="avatar">
-            </div>
-          </div>
-          <div class="scroll-icon-box">
-            <a href="#about" class="scroll-btn">
-                <i class="uil uil-mouse-alt"></i>
-                <p>Scroll Down</p>
-            </a>
-          </div>
-       </section>
-       <!-- -------------- ABOUT BOX ---------------- -->
-       <section class="section" id="about">
-          <div class="top-header">
-            <h1>About Me</h1>
-          </div>
-          <div class="row">
-            <div class="col">
-                <div class="about-info">
-                    <h3>My introduction</h3>
-                    <p>Chandy Neat - Aspiring Web Developer
+        </section>
 
+        <!-- 
+        - #SKILLS
+      -->
 
-                        I am a passionate Web Developer currently in my second year at Passerelles Numériques Cambodia (PNC). Through my studies and projects, I have honed my skills in web design, development, and problem-solving.
-                        
-                        My journey includes completing two impactful projects:
-                        
-                        Web Design Project: Focused on creating intuitive and visually appealing user interfaces.
-                        Algorithm Project: Developed efficient solutions for complex challenges, showcasing my logical and analytical thinking.
-                        Beyond technical skills, I am driven by curiosity and a love for learning. I enjoy researching new technologies and acquiring skills that empower me to grow personally and professionally.
-                    </p>
-                    <div class="about-btn">
-                        <a href="download"><button class="btn">Download CV <i class="uil uil-file-alt"></i></button></a>
-                    </div>
+        <section class="section skills" id="skills">
+          <div class="container">
+
+            <p class="section-subtitle">My Skills</p>
+
+            <h2 class="h2 section-title">I Develop Skills Regularly</h2>
+
+            <p class="section-text">
+              Dliquip ex ea commo do conse namber onequa ute irure dolor in
+              reprehen derit in voluptate
+            </p>
+
+            <ul class="skills-list">
+
+              <li class="skills-item">
+                <div class="wrapper" style="width: 95%">
+                  <h3 class=" skills-title">CSS</h3>
+
+                  <data class="skills-data" value="95">95%</data>
                 </div>
-            </div>
-            <div class="col">
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3 data-translate="frontend">Frontend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                        <span>JavaScript</span>
-                        <span>Vue</span>
-                        <span>React</span>
-                        <span>Angular</span>
-                    </div>
+
+                <div class="skills-progress-box">
+                  <div class="skills-progress" style="width: 95%"></div>
                 </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3 data-translate="backend">Backend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>PHP</span>
-                        <span>JAVA</span>
-                        <span>Python</span>
-                    </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="wrapper" style="width: 75%">
+                  <h3 class="skills-title">OOP</h3>
+
+                  <data class="skills-data" value="75">75%</data>
                 </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3 data-translate="database">Database</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>MySQL</span>
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                    </div>
+
+                <div class="skills-progress-box">
+                  <div class="skills-progress" style="width: 75%"></div>
                 </div>
-            </div>
-          </div>
-       </section>
+              </li>
 
-       <!-- -------------- PROJECT BOX ---------------- -->
+              <li class="skills-item">
+                <div class="wrapper" style="width: 90%">
+                  <h3 class="skills-title">MySQL</h3>
 
-       <section class="section" id="projects">
-          <div class="top-header">
-              <h1>Projects</h1>
-          </div>
-          <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Completed</h3>
-                <label data-translate="finished_projects">3+ Finished Projects</label>
-            </div>
-           <div class="project-box">
-    <i class="uil uil-users-alt"></i>
-    <h3 data-translate="school_projects">School Projects</h3>
-    <label>
-        <a href="https://lethean-student-info.site/">Web Design</a>
-    </label>
-    <label>
-        <a href="https://github.com/Lethean2005/TelegramChatBot_G14">Algorithm</a>
-    </label>
-    <label>
-        <a href="https://g20-task-management-app.netlify.app/">JavaScript Project</a>
-    </label>
-</div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3 data-translate="experience">Experience</h3>
-                <label data-translate="years_experience">1+ Years in the field</label>
-            </div>
-          </div>
-       </section>
-
-       <!-- -------------- CONTACT BOX ---------------- -->
-
-
-       <section class="section" id="contact">
-          <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Do you have a project in your mind, contact me here</span>
-          </div>
-          <div class="row">
-             <div class="col">
-                <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email:lethean.seourn@studnt.passerellesnumeriques.org</p>
-                    <p><i class="uil uil-phone"></i> Tel: 014 532 675</p>
-                    <p><i class="uil uil-address"></i> Address : Phnom Penh</p>
+                  <data class="skills-data" value="90">90%</data>
                 </div>
-             </div>
-             <div class="col">
-                <form action="https://t.me/Lethean_Seourn" method="POST">
-                    <div class="form-control">
-                        <div class="form-inputs">
-                            <input type="text" name="name" class="input-field" placeholder="Name" required>
-                            <input type="text" name="email" class="input-field" placeholder="Email" required>
-                        </div>
-                        <div class="text-area">
-                            <textarea name="message" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="form-button">
-                            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
-                        </div>
-                    </div>
+
+                <div class="skills-progress-box">
+                  <div class="skills-progress" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="wrapper" style="width: 70%">
+                  <h3 class="skills-title">Node.Js</h3>
+
+                  <data class="skills-data" value="70">70%</data>
+                </div>
+
+                <div class="skills-progress-box">
+                  <div class="skills-progress" style="width: 70%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="wrapper" style="width: 80%">
+                  <h3 class="skills-title">PHP</h3>
+
+                  <data class="skills-data" value="80">80%</data>
+                </div>
+
+                <div class="skills-progress-box">
+                  <div class="skills-progress" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="wrapper" style="width: 75%">
+                  <h3 class="skills-title">JavaScript</h3>
+
+                  <data class="skills-data" value="75">75%</data>
+                </div>
+
+                <div class="skills-progress-box">
+                  <div class="skills-progress" style="width: 75%"></div>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+        <!-- 
+        - #CONTACT
+      -->
+
+        <section class="section contact" id="contact">
+          <div class="container">
+
+            <div class="contact-card">
+
+              <p class="card-subtitle">Don't be shy</p>
+
+              <h2 class="h2 section-title">Drop Me a Line</h2>
+
+              <div class="wrapper">
+
+                <form action class="contact-form">
+
+                  <input type="text" name="name" placeholder="Name" required
+                    class="contact-input">
+
+                  <input type="email" name="email" placeholder="Email" required
+                    class="contact-input">
+
+                  <textarea name="message" placeholder="Message" required
+                    class="contact-input"></textarea>
+
+                  <button type="submit" class="btn-submit">Submit
+                    Message</button>
+
                 </form>
-             </div>
+
+                <ul class="contact-list">
+
+                  <li class="contact-item">
+
+                    <div class="contact-icon">
+                      <ion-icon name="location"></ion-icon>
+                    </div>
+
+                    <div>
+                      <h3 class="contact-item-title">Address</h3>
+
+                      <address class="contact-item-link">
+                        20, London, United Kingdom
+                      </address>
+                    </div>
+
+                  </li>
+
+                  <li class="contact-item">
+
+                    <div class="contact-icon">
+                      <ion-icon name="mail"></ion-icon>
+                    </div>
+
+                    <div>
+                      <h3 class="contact-item-title">Email</h3>
+
+                      <a href="mailto:hello@ethan.com"
+                        class="contact-item-link">letheanseourn05@gmail.com</a>
+                    </div>
+
+                  </li>
+
+                  <li class="contact-item">
+
+                    <div class="contact-icon">
+                      <ion-icon name="call"></ion-icon>
+                    </div>
+
+                    <div>
+                      <h3 class="contact-item-title">Phone</h3>
+
+                      <a href="tel:+1234567890" class="contact-item-link">+123
+                        456 7890</a>
+                    </div>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
           </div>
-       </section>
+        </section>
+
+        <!-- 
+        - #BLOG
+      -->
+
+        <section class="section blog" id="blog">
+          <div class="container">
+
+            <p class="section-subtitle">Latest News</p>
+
+            <h2 class="h2 section-title">Checkout My Recent Blogs</h2>
+
+            <p class="section-text">
+              Dliquip ex ea commo do conse namber onequa ute irure dolor in
+              reprehen derit in voluptate
+            </p>
+
+            <ul class="blog-list">
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/blog-1.jpg" width="1181"
+                        height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light"
+                        class="img-cover">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Web Development</a>
+
+                  <h3 class="card-title">
+                    <a href="#">Jim Morisson Says when the musics over turn off
+                      the light</a>
+                  </h3>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/blog-2.jpg" width="1181"
+                        height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light"
+                        class="img-cover">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Web Development</a>
+
+                  <h3 class="card-title">
+                    <a href="#">Jim Morisson Says when the musics over turn off
+                      the light</a>
+                  </h3>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card">
+
+                  <figure class="card-banner">
+                    <a href="#">
+                      <img src="./assets/images/blog-3.jpg" width="1181"
+                        height="843" loading="lazy"
+                        alt="Jim Morisson Says when the musics over turn off the light"
+                        class="img-cover">
+                    </a>
+                  </figure>
+
+                  <a href="#" class="card-tag">Web Development</a>
+
+                  <h3 class="card-title">
+                    <a href="#">Jim Morisson Says when the musics over turn off
+                      the light</a>
+                  </h3>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+      </article>
     </main>
 
-    <!-- --------------- FOOTER --------------- -->
-    <footer>
-        <div class="top-footer">
-            <p>Lethean Seourn .</p>
-        </div>
-        <div class="middle-footer">
-            <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home" data-translate="home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about" data-translate="about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects" data-translate="projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#contact" data-translate="contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="social_icons">
-                <a href="https://www.facebook.com/share/1BSo9BnhK9/"><div class="icon">
-                    <i class="uil uil-facebook-f"></i>
-                  </div></a>
-                <a href="https://www.linkedin.com/in/le-thean-seourn-545baa363/"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
-                <a href="tel:014532675"><div class="icon"><i class="uil uil-phone"></i></div></a>
-                <a href="https://github.com/Lethean_Seourn"><div class="icon"><i class="uil uil-github-alt"></i></div></a>
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="graphy-footer">
+      <div class="footer-container">
+        <div class="footer-top-row">
+          <div class="footer-brand">
+            <h1 class="footer-logo">Graphy</h1>
+            <p class="footer-description">Graphy empowers teams to transform raw
+              data into clear, compelling visuals — making insights easier to
+              share, understand, and act on.</p>
+
+            <!-- Social Icons Added Here -->
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i
+                  class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="tel:+1234567890" aria-label="Phone"><i
+                  class="bi bi-telephone"></i></a>
             </div>
-        <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Lethean Seourn</a> - All rights reserved</p>
+          </div>
+
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3 class="footer-heading">Product</h3>
+              <ul class="footer-links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">Changelog</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h3 class="footer-heading">Resources</h3>
+              <ul class="footer-links">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h3 class="footer-heading">Company</h3>
+              <ul class="footer-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Partners</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <div class="footer-bottom-row">
+          <div class="footer-legal">
+            <span>© 2025 Graphy. All rights reserved.</span>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookies Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    </div>
+    <!-- 
+    - #BACK TO TOP
+  -->
 
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <a href="#top" class="back-to-top" data-back-to-top>BACK TOP</a>
 
-    <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
 
-    <!-- ----- MAIN JS ----- -->
-    <script src="./js/index.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-        // Initialize typed.js when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initTyped();
-        });
-    </script>
-</body>
-</html>
+  </body>
+
+  </html
